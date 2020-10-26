@@ -14,7 +14,7 @@ But bears it out even to the edge of doom.
   I never writ, nor no man ever loved.`;
 
 let uniques = {};
-: let words = sonnet.match(/[\w']+/g);
+let words = sonnet.match(/[\w']+/g);
 //let words = sonnet.match(/\w+/g);
  
 /*let uniques = new Map();
@@ -36,3 +36,14 @@ for (let i = 0; i < words.length; i++) {
 
   console.log(uniques)
 
+function square(sq){
+  return sq * sq;
+}
+
+console.log(square(4));
+
+let altsquare = (sq) => {
+  return (sq * sq);
+}
+
+console.log(altsquare(4));

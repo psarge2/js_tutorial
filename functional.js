@@ -62,7 +62,7 @@ function dakotas(elements) {
 
 
     let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-
+// sum: Imperative solution
     function imperatriveSum(elements) {
         let total = 0; 
         elements.forEach(function(n) {
@@ -72,3 +72,28 @@ function dakotas(elements) {
     }
 
     console.log(imperatriveSum(numbers));
+
+    numbers.reduce((total, n) => {
+        total += n;
+        return total;
+    })
+
+    // sum: Functional solution
+function functionalSum(elements) {
+    return elements.reduce((total, n) => { return total += n; });
+  }
+  console.log(functionalSum(numbers));
+
+  function functionalSum(elements) {
+    return elements.reduce((total, n) => { return total *= n; });
+  }
+  console.log(functionalSum(numbers));
+
+  function imperativeLengths(elements) {
+    let lengths = {};
+    elements.forEach(function(element) {
+      lengths[element] = element.length;
+    });
+    return lengths;
+  }
+  console.log(imperativeLengths(states));
