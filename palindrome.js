@@ -7,10 +7,15 @@ function reverse(string) {
 function Phrase(content) {
   this.content = content;
 
-  // Returns true if the phrase is a palindrome, false otherwise.
+
+  //Returns content processed for a palindrome testing.
+  this.processedContent = function processedContent() {
+    return this.content.toLowerCase();
+  }
+
+  // Returns true for a palindrome, false otherwise.
   this.palindrome = function palindrome() {
-    let processedContent = this.content.toLowerCase();
-    return processedContent === reverse(processedContent);
+    return processedContent === this.processedContent().reverse();
   }
 }
 
